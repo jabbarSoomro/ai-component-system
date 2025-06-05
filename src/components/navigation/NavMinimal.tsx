@@ -112,7 +112,7 @@ const NavMinimal: React.FC<NavigationProps> = ({
 
                 {/* Mobile Menu */}
                 <AnimatePresence>
-                    {isOpen && (
+                    {isOpen ? (
                         <motion.div
                             className="md:hidden border-t border-gray-100"
                             variants={mobileMenuVariants}
@@ -142,8 +142,9 @@ const NavMinimal: React.FC<NavigationProps> = ({
                                 )}
                             </div>
                         </motion.div>
-                    )}
+                    ) : null}
                 </AnimatePresence>
+
             </div>
         </Nav>
     );

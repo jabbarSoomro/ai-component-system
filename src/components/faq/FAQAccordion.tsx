@@ -127,7 +127,7 @@ const FAQAccordion: React.FC<FAQProps> = ({
                             </button>
 
                             <AnimatePresence>
-                                {isOpen(index) && (
+                                {isOpen(index) ? (
                                     <motion.div
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: 'auto', opacity: 1 }}
@@ -173,7 +173,7 @@ const FAQAccordion: React.FC<FAQProps> = ({
                                             )}
                                         </div>
                                     </motion.div>
-                                )}
+                                ) : null}
                             </AnimatePresence>
                         </Item>
                     ))}

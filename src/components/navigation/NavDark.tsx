@@ -98,7 +98,7 @@ const NavDark: React.FC<NavigationProps> = ({
 
                 {/* Mobile Menu */}
                 <AnimatePresence>
-                    {isOpen && (
+                    {isOpen ?(
                         <motion.div
                             className="md:hidden border-t border-gray-800"
                             initial={{ opacity: 0, height: 0 }}
@@ -127,7 +127,7 @@ const NavDark: React.FC<NavigationProps> = ({
                                 )}
                             </div>
                         </motion.div>
-                    )}
+                    ) : null}
                 </AnimatePresence>
             </div>
         </Nav>

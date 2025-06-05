@@ -134,7 +134,7 @@ const NavDropdown: React.FC<NavigationProps> = ({
 
                 {/* Mobile Menu */}
                 <AnimatePresence>
-                    {isOpen && (
+                    {isOpen  ? (
                         <motion.div
                             className="lg:hidden border-t border-gray-100"
                             initial={{ opacity: 0, height: 0 }}
@@ -180,7 +180,7 @@ const NavDropdown: React.FC<NavigationProps> = ({
                                 )}
                             </div>
                         </motion.div>
-                    )}
+                    ) : null}
                 </AnimatePresence>
             </div>
         </nav>
